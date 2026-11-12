@@ -2,7 +2,7 @@
 
 ## Business problem
 
-Detects vector index lag by comparing produced, indexed, and queryable embedding counts.
+An embedding pipeline can report successful production while search still sees fewer queryable records than expected.
 
 ## Reproduce the workflow
 

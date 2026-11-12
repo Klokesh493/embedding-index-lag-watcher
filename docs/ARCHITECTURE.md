@@ -4,11 +4,14 @@ Detects vector index lag by comparing produced, indexed, and queryable embedding
 
 ```mermaid
 flowchart LR
-    N0["sample_indexes.csv"]
-    N1["index_lag.py"]
-    N2["lag pct / status"]
-    N3["Result for operator review"]
-    N0 --> N1 --> N2 --> N3
+    A["Produced and queryable embedding counts"]
+    B["Calculate percentage gap"]
+    C{"Lag exceeds per-index limit?"}
+    D["Mark index lagging"]
+    E["Mark index OK"]
+    A --> B --> C
+    C -->|Yes| D
+    C -->|No| E
 ```
 
 ## Operational boundaries

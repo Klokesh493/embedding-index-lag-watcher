@@ -2,6 +2,8 @@
 
 An embedding pipeline can report successful production while search still sees fewer queryable records than expected.
 
+[Skills and verification](docs/ENGINEERING_NOTES.md)
+
 ## What I built
 
 I built a freshness check for vector indexes that compares produced embeddings with queryable embeddings and evaluates the percentage gap against each index's limit.
